@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yan e corno?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Yan e corno?</h1>
+    <button id="sim-btn">Sim</button>
+    <button id="nao-btn">Não</button>
+  </div>
+
+  <script>
+    const naoBtn = document.getElementById('nao-btn');
+
+    naoBtn.addEventListener('mouseover', () => {
+      const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+      const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+      naoBtn.style.position = 'absolute';
+      naoBtn.style.left = `${randomX}px`;
+      naoBtn.style.top = `${randomY}px`;
+    });
+
+    const simBtn = document.getElementById('sim-btn');
+
+    simBtn.addEventListener('click', () => {
+      window.location.href = 'https://www.youtube.com/watch?v=kGzcNYjEIVE&pp=ygUXY29tbyBzYWJlciBzZSBzb3UgY29ybm8%3D';
+    });
+  </script>
+</body>
+</html>
